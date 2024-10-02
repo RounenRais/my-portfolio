@@ -1,41 +1,159 @@
-body{
+body {
   width: 100%;
-  background-color: #606676;
   padding: 0;
   margin: 0;
-  color: #BEC6A0;
+  color: #a7bb5f;
+  background-color: #606676;
 }
-.wrapper{
-  padding: 10px;
+.content{
+  transition: all 5s all;
 }
-.navBar{
+.wrapper {
   display: flex;
   justify-content: center;
-  background-color: rgb(204, 224, 214);
-  padding: 1%;
-  gap: 5px;
 }
-.myCard{
-display: flex;
-flex-direction: column;
+.myCard {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  gap: 10px;
 }
-img{
-  width: 15%;
+
+p {
+  text-align: center;
 }
-a,
-.green {
-  text-decoration: none;
-  color: rgb(82, 152, 129);
+
+.languageButton {
+  display: flex;
+  gap: 3%;
+  place-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
   transition: 0.4s;
-  padding: 3px;
 }
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+
+.slider {
+  place-items: center;
 }
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border: #171717 solid;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #606676;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #171717;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.languageText {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  place-items: center;
+  color: rgb(82, 152, 129);
+
+  gap: 3%;
+}
+
+.navBarRenk1 {
+  background-color: rgb(204, 224, 214);
+  color: rgb(82, 152, 129);
+
+  transition: all 1s ease;
+}
+
+.navYazi1 {
+  color: rgb(82, 152, 129);
+}
+
+.navYazi2 {
+  color: rgb(255, 255, 255);
+}
+
+.navBarRenk2 {
+  background-color: rgb(255, 45, 45);
+
+  transition: all 1s ease;
+}
+
 @media (min-width: 2048px) {
   body {
+    margin: 0;
+    padding: 0;
     display: flex;
     place-items: center;
   }
@@ -44,5 +162,11 @@ a,
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .myCard {
+    flex-direction: column;
   }
 }
