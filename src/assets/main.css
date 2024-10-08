@@ -1,3 +1,4 @@
+
 body {
   width: 100%;
   padding: 0;
@@ -57,13 +58,7 @@ p {
 .slider {
   place-items: center;
 }
-.contact{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  border: #171717 solid;
-}
+
 .slider:before {
   position: absolute;
   content: "";
@@ -149,7 +144,16 @@ input:checked+.slider:before {
 
   transition: all 1s ease;
 }
-
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contentText{
+  text-decoration: none;
+  color: #a7bb5f;
+}
 @media (min-width: 2048px) {
   body {
     margin: 0;

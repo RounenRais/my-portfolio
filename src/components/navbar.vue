@@ -6,17 +6,18 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink :class="themeRenk.navbarYazi" class="navLink " to="/">{{ $t('navHome') }}</RouterLink>
         <RouterLink :class="themeRenk.navbarYazi" class="navLink" to="/about">{{ $t('navAbout') }}</RouterLink>
             <div>
-              
+
               <div class="languageButton">
                 <label class="switch">
                     <input type="checkbox" v-model="isEnglish" @change="toggleLanguage" />
                     <span class="slider round"></span>
+
                   </label>
                   
 
-                  <span class="languageText">{{ isEnglish ? 'English' : 'Türkçe' }}</span>
+                  <span class="languageIcon" :class=" isEnglish ? 'flag-icon flag-icon-gb' : 'flag-icon flag-icon-tr' "></span>
   </div></div>
-  <div class="theme">  <button @click="changeTheme" class="switchTheme">{{themeText}}</button></div>
+  <div class="theme"> </div>
 
         </nav>
 </template>

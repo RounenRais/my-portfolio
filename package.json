@@ -15,9 +15,12 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@growthbunker/vueflags": "^0.1.14",
+    "flag-icon-css": "^4.1.7",
     "font-awesome": "^4.7.0",
     "my-portfolio": "file:",
     "vue": "^3.4.29",
+    "vue-flag-icon": "^2.1.0",
     "vue-i18n": "^10.0.0",
     "vue-router": "^4.3.3"
   },
