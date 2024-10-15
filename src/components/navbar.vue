@@ -2,24 +2,33 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-<nav :class=themeRenk.navbar class="navBar">
-        <RouterLink :class="themeRenk.navbarYazi" class="navLink " to="/">{{ $t('navHome') }}</RouterLink>
-        <RouterLink :class="themeRenk.navbarYazi" class="navLink" to="/about">{{ $t('navAbout') }}</RouterLink>
-            <div>
+  <header class="app-header">
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul class="navButtons">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          
+        <div class="languageButton">
+          <label class="switch">
+              <input type="checkbox" v-model="isEnglish" @change="toggleLanguage" />
+              <span class="slider round"></span>
 
-              <div class="languageButton">
-                <label class="switch">
-                    <input type="checkbox" v-model="isEnglish" @change="toggleLanguage" />
-                    <span class="slider round"></span>
+            </label>
+            
 
-                  </label>
-                  
+            <span class="languageIcon" :class=" isEnglish ? 'flag-icon flag-icon-gb' : 'flag-icon flag-icon-tr' "></span>
+</div>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </nav>
+  </header>
 
-                  <span class="languageIcon" :class=" isEnglish ? 'flag-icon flag-icon-gb' : 'flag-icon flag-icon-tr' "></span>
-  </div></div>
-  <div class="theme"> </div>
-
-        </nav>
 </template>
 <script>
 export default {

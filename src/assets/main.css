@@ -26,14 +26,15 @@ p {
 }
 
 .languageButton {
-  display: flex;
-  gap: 3%;
-  place-items: center;
+
+ display: flex;
+ align-items: center;
+ flex-direction: row;
 }
 
 .switch {
   position: relative;
-  display: inline-block;
+  display: flex;
   width: 60px;
   height: 34px;
 }
@@ -100,11 +101,6 @@ input:checked+.slider:before {
   width: 100%;
 }
 
-.languageText {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
 
 .slider.round {
   border-radius: 34px;
@@ -124,26 +120,9 @@ input:checked+.slider:before {
   gap: 3%;
 }
 
-.navBarRenk1 {
-  background-color: rgb(204, 224, 214);
-  color: rgb(82, 152, 129);
 
-  transition: all 1s ease;
-}
 
-.navYazi1 {
-  color: rgb(82, 152, 129);
-}
 
-.navYazi2 {
-  color: rgb(255, 255, 255);
-}
-
-.navBarRenk2 {
-  background-color: rgb(255, 45, 45);
-
-  transition: all 1s ease;
-}
 .contact{
   display: flex;
   flex-direction: column;
@@ -153,6 +132,74 @@ input:checked+.slider:before {
 .contentText{
   text-decoration: none;
   color: #a7bb5f;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-header {
+  background-color: #4C5533; /* Haki tonunda */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem;
+  background-color: #e0e4cc;
+  
+}
+
+ .about,.skills, .projects, .contact {
+  padding: 2rem;
+  background-color: #fefefe;
+}
+
+.skills ul {
+ 
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-card {
+  border: 1px solid #4C5533;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4C5533;
+  color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .skills ul {
+    flex-direction: column;
+  }
 }
 @media (min-width: 2048px) {
   body {
@@ -173,4 +220,15 @@ input:checked+.slider:before {
   .myCard {
     flex-direction: column;
   }
+  .languageButton {
+
+    
+    flex-direction: column-reverse;
+   }
+   .navButtons
+{
+  display: flex;
+  gap: 10px;
+}
+   
 }
