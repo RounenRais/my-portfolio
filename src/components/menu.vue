@@ -4,15 +4,14 @@
       <div class="imgPhoto">
         <img class="myPhoto" src="../assets/images.png" alt="">
       </div>
-      <h2>Hello, I'm Yunus Aksu</h2>
-      <p>I'm a web developer passionate about learn</p>
+      <h2>{{ $t('hello') }}</h2>
+      <p>{{ $t('aboutS') }}</p>
     </section>
   
     <!-- About Section -->
     <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>I am a university student. 
-        I am studying computer engineering</p>
+      <h2>{{ $t('aboutMeS') }}</h2>
+      <p>{{ $t('aboutMe') }}</p>
     </section>
   
     <!-- Skills Section -->
@@ -37,27 +36,38 @@
   
     <!-- Contact Section -->
     <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <p>Email: [your email]</p>
-      <p>Phone: [your phone number]</p>
+      <h2>{{ $t('contactMe') }}</h2>
+      <p><font-awesome-icon :icon="['fas', 'envelope']" :bounce='mailSt' @mouseover="mailSt=true" @mouseleave="mailSt=false" /> <span  @mouseover="mailSt=true" @mouseleave="mailSt=false">aksu3795@gmail.com</span></p>
+      <p> <div class="icon-ct">
+        <font-awesome-icon  :icon="['fab', 'github']" :bounce='githubSt' @mouseover="githubSt=true" @mouseleave="githubSt=false" />
+        <a class="contentText" @mouseover="githubSt=true" @mouseleave="githubSt=false" href="https://github.com/RounenRais">RounenRais</a>
+      </div></p>
+      <p>
+    <div class="icon-ct">
+      <font-awesome-icon :icon="['fas', 'phone']" :bounce='phoneSt'  @mouseover="phoneSt=true" @mouseleave="phoneSt=false"  ></font-awesome-icon>
+      <a  @mouseover="phoneSt=true" @mouseleave="phoneSt=false" >0556 667 93 41</a>
+    </div>  </p>    
     </section>
   
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2024 Rais. All rights reserved.</p>
+      <p>&copy; 2024 Rais. {{ $t('rights') }} </p>
     </footer>
   </template>
   <script>
+import { useI18n } from 'vue-i18n';
+
   export default{
   data(){
   return{
     githubSt:false,
     phoneSt:false,
+    mailSt:false,
     projects: [
-        { id: 1, name: 'Okurun Köşesi', description: 'Description of project one.' },
-        { id: 2, name: 'Project Two', description: 'Description of project two.' },
+        { id: 1, name: 'Okurun Köşesi', description: 'Books and mini games about literature.' },
+        { id: 2, name: 'Account Base', description: 'An app to make accounting  work easier ' },
       ],
-  
+    
   };},
   };
   </script>

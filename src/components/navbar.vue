@@ -4,12 +4,12 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header class="app-header">
     <nav>
-      <h1>My Portfolio</h1>
+      <h1>Rais</h1>
       <ul class="navButtons">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">{{ $t('navAbout') }}</a></li>
+        <li><a href="#skills">{{ $t('navSkills') }}</a></li>
+        <li><a href="#projects">{{ $t('navProjects') }}</a></li>
+        <li><a href="#contact">{{ $t('navContact') }}</a></li>
         <li>
           
         <div class="languageButton">
@@ -48,24 +48,7 @@ export default {
       // Dili değiştir
       this.$i18n.locale = this.isEnglish ? 'en' : 'tr';
     },
-    changeTheme(){
-     
 
-          if(this.sayac==0){
-            this.themeRenk.navbar='navBarRenk2'
-            this.themeRenk.navbarYazi='navYazi2'
-            this.themeText='White Theme'
-            this.sayac=1
-          }
-          else if(this.sayac==1){
-            this.themeRenk.navbar='navBarRenk1'
-            this.themeRenk.navbarYazi='navYazi1'
-            this.themeText='Dark Theme'
-            this.sayac=0
-
-          }
-
-    }
   }
 };
 </script>

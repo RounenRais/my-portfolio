@@ -14,11 +14,6 @@
     <font-awesome-icon  :icon="['fab', 'github']" :bounce='githubSt' @mouseover="githubSt=true" @mouseleave="githubSt=false" />
     <a class="contentText" @mouseover="githubSt=true" @mouseleave="githubSt=false" href="https://github.com/RounenRais">RounenRais</a>
   </div>
- 
-
-  
-
-
 <div class="phone">
   <font-awesome-icon :icon="['fas', 'phone']" :bounce='phoneSt'  @mouseover="phoneSt=true" @mouseleave="phoneSt=false"  ></font-awesome-icon>
   <a  @mouseover="phoneSt=true" @mouseleave="phoneSt=false" >0556 667 93 41</a>

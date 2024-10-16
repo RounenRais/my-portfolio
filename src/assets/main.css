@@ -139,7 +139,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+.logo2{
+  width: 10%;
+}
 .app-header {
   background-color: #4C5533; /* Haki tonunda */
   color: white;
@@ -159,7 +161,10 @@ nav a {
   text-decoration: none;
 
 }
-
+.icon-ct{
+  display: flex;
+  gap: 5px;
+}
 .hero {
   text-align: center;
   padding: 3rem;
@@ -179,7 +184,7 @@ nav a {
 }
 
 .project-card {
-  border: 1px solid #4C5533;
+  border: 1px solid #7b9534;
   padding: 1rem;
   margin: 1rem 0;
 }
