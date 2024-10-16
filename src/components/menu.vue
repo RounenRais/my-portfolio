@@ -27,7 +27,7 @@
   
     <!-- Projects Section -->
     <section id="projects" class="projects">
-      <h2>Projects</h2>
+      <h2>{{$('navProjects')}}</h2>
       <div class="project-card" v-for="project in projects" :key="project.id">
         <h3>{{ project.name }}</h3>
         <p>{{ project.description }}</p>
